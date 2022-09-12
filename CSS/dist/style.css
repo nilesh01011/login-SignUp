@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(135deg, #79F1A4 4%, #016b60 110%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (min-width: 1038px) and (max-width: 1480px) {
+  body {
+    overflow: hidden;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.left {
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0 15px 15px 0;
+}
+.left .contents {
+  z-index: 5;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bgArticlesImg {
+  z-index: 10;
+}
+.bgArticlesImg .img1 {
+  top: 90px;
+  right: 40px;
+}
+.bgArticlesImg .img2 {
+  right: 8px;
+}
+.bgArticlesImg .img3 {
+  top: 40px;
+  right: 200px;
+}
+.bgArticlesImg .img4 {
+  right: 40px;
+  top: 180px;
+}
+.bgArticlesImg .img5 {
+  right: 700px;
+  bottom: 100px;
+}
+.bgArticlesImg .img6 {
+  right: 650px;
+}
+.bgArticlesImg .img7 {
+  right: 550px;
+  top: 100px;
+  transform: rotate(334deg);
+}
+.bgArticlesImg .img8 {
+  right: 450px;
+  bottom: 20px;
+  transform: rotate(12deg);
+}
+
+.form_outer {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  margin-top: 1.3rem;
+  border-radius: 20px;
+}
+.form_outer form {
+  z-index: 1000;
+  width: 100%;
+  padding: 1.3rem;
+}
+.form_outer form h2 {
+  text-align: center;
+  color: #FFCC00;
+  font-weight: 650;
+  font-family: "Ubuntu", sans-serif;
+}
+.form_outer form .inputContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.form_outer form .inputContent #eye_lock {
+  position: absolute;
+  right: 0.8rem;
+  top: 13px;
+  cursor: pointer;
+}
+.form_outer form .inputContent .input {
+  width: 100%;
+  height: 40px;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: transparent;
+}
+.form_outer form .inputContent .input::placeholder {
+  color: #aaa;
+}
+.form_outer form .inputContent .input:focus {
+  outline: none;
+  border-color: #000;
+}
+.form_outer form .forgetPassword {
+  margin-bottom: 0.8rem;
+}
+.form_outer form .forgetPassword a {
+  text-decoration: none;
+}
+.form_outer form .btns {
+  width: 100%;
+  height: max-content;
+}
+.form_outer form .btns button {
+  border: none;
+  background-image: linear-gradient(135deg, #0E5CAD 10%, #79F1A4 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.7rem;
+  transition: all 0.7s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.form_outer form .btns button::before {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px #fff;
+  filter: blur(1px);
+  opacity: 0.9;
+  top: -30px;
+  left: 0;
+  transition: 0.7s;
+  transform: rotate(-20deg) translateX(-60px);
+}
+.form_outer form .btns button:hover::before {
+  transform: rotate(-20deg) translate(550px, 70px);
+}
+
+.bottom_container {
+  position: relative;
+}
+.bottom_container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  border-top: 1px solid #000;
+}
+
+@media screen and (max-width: 1038px) {
+  .bgArticlesImg .img5 {
+    left: 120px;
+    bottom: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    background: #fff;
+  }
+
+  .contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  .left {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .bgArticlesImg .img7 {
+    left: 30px;
+    top: 50px;
+  }
+  .bgArticlesImg .img8 {
+    right: 60px;
+    bottom: 50px;
+    transform: rotate(143deg);
+  }
+  .bgArticlesImg .img4 {
+    right: 10px;
+  }
+  .bgArticlesImg .img5 {
+    left: 50px;
+    bottom: 80px;
+  }
+  .bgArticlesImg .img3 {
+    top: 90vh;
+    right: 450px;
+  }
+
+  .form_outer {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (max-width: 680px) {
+  .bgArticlesImg .img7 {
+    left: 10px;
+    top: 10px;
+    transform: rotate(180deg);
+  }
+  .bgArticlesImg .img2 {
+    top: 95vh;
+    right: 100px;
+  }
+
+  .left {
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bgArticlesImg .img5 {
+    left: 7px;
+  }
+  .bgArticlesImg .img8 {
+    right: 0;
+    top: 92vh;
+    z-index: -1;
+    transform: rotate(180deg);
+  }
+  .bgArticlesImg .img3 {
+    top: 93vh;
+    right: 240px;
+  }
+  .bgArticlesImg .img1 {
+    left: 10px;
+  }
+  .bgArticlesImg .img7 {
+    top: 2px;
+    left: -10%;
+  }
+  .bgArticlesImg .img2 {
+    top: 40px;
+    right: 0;
+  }
+
+  .left .contents {
+    padding-top: 1.5rem;
+  }
+}
